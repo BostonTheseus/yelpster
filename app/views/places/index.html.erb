@@ -5,6 +5,10 @@
 		<p class="font"><%= place.description %></p><br />
 	</div>
 
+	<% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+
 	<%= will_paginate @places %>
 
 <% end %>
